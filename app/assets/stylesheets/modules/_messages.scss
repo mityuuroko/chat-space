@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper{
+  display: flex;
+}
+
+
+.Side-bar{
+  width: 300px;
+  background-color: #253141;
+  &__user-name{
+    height: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Top-items{
+      height: 20px;
+      width: 260px;
+      background-color: #253141;
+      display: flex;
+      justify-content: space-between;
+      &__name{
+        height: 20px;
+        font-size: 16px;
+        color: #ffffff;
+      }
+      &__icons{
+        color: #ffffff;
+        text-decoration: none;
+        .Icon1{
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  &__group-list{
+    width: 300px;
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    .Group-name{
+      color: #ffffff;
+      height: 91px;
+      &__title{
+        font-size: 15px;
+        padding: 20px 20px 0 20px;
+        margin-bottom: 5px;
+      }
+      &__text{
+        font-size: 11px;
+        padding: 0 20px 0 ;
+       }
+    }
+  }
+}
+
+.Chat-main{
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  &__group-info{
+    height: 100px;
+    border: 1px solid #eeeeee;
+    .Catalog{
+      display: flex;
+      justify-content: space-between;
+      &__name{
+       .Member{
+          &__text{
+            color: #333333;
+            font-size: 20px;
+            margin: 35px 0 17px 40px;
+          }
+          &__team{
+            color: #999999;
+            font-size: 12px;
+            margin: 15px 0 0 40px;
+          }
+        }
+      }
+      &__edit{
+        margin: 28px 40px 0 0;
+        .Catalog__btn{
+         color: #38aef0;
+         font-size: 16px;
+         text-decoration: none;
+         border: 1px solid #38aef0;
+         padding: 12px 20px;
+        }
+      }
+    }
+  }
+  &__message-list{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 35px 40px 0;
+    .Message-box{
+      margin-bottom: 46px;
+      .Message-info{
+        display: flex;
+        &__name{
+          color: #333333;
+          font-size: 16px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .Message{
+        color: #434A54;
+        font-size: 15px;
+        margin-top: 12px;
+      }
+    }
+  }
+  &__message-form{
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+    .Content{
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      .Up{
+        background-color: #ffffff;
+        width: 100vw;
+        padding-left: 10px;
+        display: flex;
+        position: relative;
+        &__text{
+          color: #999999;
+          border: none;
+        }
+        &__image{
+          position: absolute;
+          right: 10px;
+          height: 50px;
+        }
+        &__icon{
+          line-height: 50px;
+          font-size: 25px;
+        }
+        &__folder{
+          display: none;
+        }
+      }
+      .Send_btn{
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #38aef0;
+        padding: 0 30px;
+        margin-left: 10px;
+        border: none;
+      }
+    }
+  }
+}
