@@ -1,0 +1,37 @@
+.Chat-main
+  .Chat-main__group-info
+    .Catalog
+      .Catalog__name
+        .Member
+          .Member__text
+            test
+          .Member__team
+            Menber:name
+      .Catalog__edit
+        = link_to "#", class: "Catalog__btn" do
+          Edit
+  .Chat-main__message-list
+    .Message-box
+      .Message-info
+        .Message-info__name
+          masa
+        .Message-info__date
+          2020/08/22
+      .Message
+        おはよう
+    .Message-box
+      .Message-info
+        .Message-info__name
+          masa2
+        .Message-info__date
+          2020/08/22
+      .Message
+        おはよう2
+  .Chat-main__message-form
+    .Content
+      .Up
+        %input.Up__text{"placeholder": "type a message", "type": "text"}
+        %label{class: "Up__image"}
+          = icon('far', 'image', class: "Up__icon")
+          %input{type: "file", class:"Up__folder"}
+      %input.Send_btn{"name": "commit", "type": "submit", "value": "Send"}
