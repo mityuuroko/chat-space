@@ -2,11 +2,11 @@
   .Side-bar__user-name
     .Top-items
       .Top-items__name
-        name
+        = current_user.name
       .Top-items__icons
         = link_to "#", class: "Top-items__icons" do
           = icon('far', 'edit', class: "Icon1")
-        = link_to "#", class: "Top-items__icons" do
+        = link_to edit_user_path(current_user), class: "Top-items__icons" do
           = icon('fas', 'cog',  class: "Icon2")
   .Side-bar__group-list
     .Group-name
