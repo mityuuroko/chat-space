@@ -4,34 +4,21 @@
       .Catalog__name
         .Member
           .Member__text
-            test
+            = @group.name
           .Member__team
-            Menber:name
+          - current_user.groups.each do |group|
+            = group.name
       .Catalog__edit
-        = link_to "#", class: "Catalog__btn" do
+        = link_to edit_group_path(current_user), class: "Catalog__btn" do
           Edit
   .Chat-main__message-list
-    .Message-box
-      .Message-info
-        .Message-info__name
-          masa
-        .Message-info__date
-          2020/08/22
-      .Message
-        おはよう
-    .Message-box
-      .Message-info
-        .Message-info__name
-          masa2
-        .Message-info__date
-          2020/08/22
-      .Message
-        おはよう2
+    = render @messages
   .Chat-main__message-form
-    .Content
-      .Up
-        %input.Up__text{"placeholder": "type a message", "type": "text"}
-        %label{class: "Up__image"}
-          = icon('far', 'image', class: "Up__icon")
-          %input{type: "file", class:"Up__folder"}
-      %input.Send_btn{"name": "commit", "type": "submit", "value": "Send"}
+    = form_with model: [@group, @message], html: {class: "Up"}, local: true do |f|
+      .Content
+        .Up
+          = f.text_field :content, class: 'Up__text', placeholder: 'type a message'
+          = f.label :image, class: 'Up__image' do
+            = icon('far', 'image', class: "Up__icon")
+            = f.file_field :image, class: 'Up__folder'
+          = f.submit 'Send', class: 'Send_btn'
