@@ -9,7 +9,7 @@
           - current_user.groups.each do |group|
             = group.name
       .Catalog__edit
-        = link_to edit_group_path(current_user), class: "Catalog__btn" do
+        = link_to edit_group_path(@group.id), class: "Catalog__btn" do
           Edit
   .Chat-main__message-list
     = render @messages
